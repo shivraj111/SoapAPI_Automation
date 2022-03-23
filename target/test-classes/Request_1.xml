@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<env:Envelope xmlns:env="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <env:Header>
+        <wsse:Security xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" env:mustUnderstand="1">
+            <wsse:UsernameToken>
+                <wsse:Username>anan54@levistraussandco_preview</wsse:Username>
+                <wsse:Password Type="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordText">Load@098</wsse:Password>
+            </wsse:UsernameToken>
+        </wsse:Security>
+    </env:Header>
+    <env:Body>
+        <wd:Launch_Integration_Event_Request xmlns:wd="urn:com.workday/bsvc" wd:Debug_Mode="false" wd:version="v28.0">
+            <wd:Integration_System_Reference>
+                <wd:ID wd:type="Integration_System_ID">INT118C_Concur_</wd:ID>
+            </wd:Integration_System_Reference>
+            <wd:Invoke_Integration_As_Current_User>false</wd:Invoke_Integration_As_Current_User>
+            <wd:Integration_Launch_Parameter_Data>
+                <wd:Launch_Parameter_Reference>
+
+                    <wd:ID wd:type="Workday_Launch_Parameter_Name" wd:parent_id="Core Connector: Date Launch Parameters" wd:parent_type="Workday_Integration_Service_Name">Effective Date</wd:ID>
+                </wd:Launch_Parameter_Reference>
+                <wd:Launch_Parameter_Value_Data>
+                    <wd:Date>2022-01-16</wd:Date>
+                </wd:Launch_Parameter_Value_Data>
+            </wd:Integration_Launch_Parameter_Data>
+            <wd:Integration_Launch_Parameter_Data>
+                <wd:Launch_Parameter_Reference>
+                    <wd:ID wd:type="Workday_Launch_Parameter_Name" wd:parent_id="Core Connector: Date Launch Parameters" wd:parent_type="Workday_Integration_Service_Name">As Of Entry Moment</wd:ID>
+                </wd:Launch_Parameter_Reference>
+                <wd:Launch_Parameter_Value_Data>
+                    <wd:DateTime>2022-01-16T00:00:00-07:00</wd:DateTime>
+                </wd:Launch_Parameter_Value_Data>
+            </wd:Integration_Launch_Parameter_Data>
+            <wd:Integration_Launch_Parameter_Data>
+                <wd:Launch_Parameter_Reference>
+                    <wd:ID wd:type="Workday_Launch_Parameter_Name" wd:parent_id="Core Connector: Worker Integration Configuration" wd:parent_type="Workday_Integration_Service_Name">Full File</wd:ID>
+                </wd:Launch_Parameter_Reference>
+                <wd:Launch_Parameter_Value_Data>
+                    <wd:Boolean>true</wd:Boolean>
+                </wd:Launch_Parameter_Value_Data>
+            </wd:Integration_Launch_Parameter_Data>
+        </wd:Launch_Integration_Event_Request>
+    </env:Body>
+</env:Envelope>
