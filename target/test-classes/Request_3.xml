@@ -1,0 +1,24 @@
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:env="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <env:Header>
+        <wsse:Security
+                xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"
+                env:mustUnderstand="1">
+            <wsse:UsernameToken>
+                <wsse:Username>anan54@levistraussandco_preview</wsse:Username>
+                <wsse:Password
+                        Type="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordText">Load@098</wsse:Password>
+            </wsse:UsernameToken>
+        </wsse:Security>
+    </env:Header>
+    <env:Body>
+        <wd:Launch_Integration_Event_Request
+                xmlns:wd="urn:com.workday/bsvc"
+                wd:Debug_Mode="false"
+                wd:version="v28.0">
+            <wd:Integration_System_Reference>
+                <wd:ID wd:type="Integration_System_ID">INT_STUDIO_FTP_INT_OUTPUT/INT_STUDIO_FTP_INT_OUTPUT/StartHere</wd:ID>
+            </wd:Integration_System_Reference>
+            <wd:Invoke_Integration_As_Current_User>false</wd:Invoke_Integration_As_Current_User>
+        </wd:Launch_Integration_Event_Request>
+    </env:Body>
+</SOAP-ENV:Envelope>
