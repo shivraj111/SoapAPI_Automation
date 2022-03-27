@@ -216,7 +216,7 @@ public class SoapTest {
     public static void makeRequestWithInterval(int IntervalInSecond, int Counter) {
         Boolean flag = false;
         Timer timer = new Timer();
-        int begin = 0;
+        int begin = 1;
         //timeInterval values are in millisecond
         int timeInterval = IntervalInSecond;
         timer.schedule(new TimerTask() {
@@ -278,15 +278,16 @@ public class SoapTest {
 
 
     public static void main(String[] args) throws Exception {
-        /* updateXMLFile(ExtractValue(postRequest(requestFile_1, resourcePath)));
+         updateXMLFile(ExtractValue(postRequest(requestFile_1, resourcePath)));
         Thread.sleep(3000);
-        extractMultipleValues(postRequest(requestFile_2, resourcePath));*/
+        extractMultipleValues(postRequest(requestFile_2, resourcePath));
         //Completed , Processing  , INT118C_Concur_ , INTEGRATION_ESB_INVOCATION-9-960236
         //makeRequestWithInterval(300, 5);
         makeRequestWithInterval(10, 5);
         createCSV(CSVFile);
 //----Upload CSV file
         //postRequest(requestFile_3, resourcePath);
+
     }
 
 }
